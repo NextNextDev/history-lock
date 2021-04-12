@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>History</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery.js" defer></script>
+    <script src="js/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <div class="row row-center">
+        <div class="col col-right">
+            <div class="settings" style="padding-left: -10px;"></div>
+            <h5 style="padding-top: 17px;">Ｈｉｓｔｏｒｙ　Ｌｏｃｋ</h5>
+            <div class="toggle toggle--push" style="padding-top: 10px;padding-left: 15px;">
+                <input type="checkbox" id="toggle--push" class="toggle--checkbox">
+                <label class="toggle--btn" data-label-on="on" data-label-off="off"></label>
+            </div>
+        </div>
+    </div>
+    <hr id="hr_main">
+    <div id="pass">
+        <p class="font-weight-light pass-text">Для отключения защиты введите <span id="prv">правильный</span> пароль.</p>
+        <p class="font-weight-light reset-pass-text">Введите новый пароль.</p>
+        <password>
+            <input type="password" id="input_pass" placeholder="пароль" value="">
+            <button id="button_pass"></button>
+            <button id="save_pass">OK</button>
+        </password>
+    </div>
+    <p class="font-weight-light" id="bad-pass-text">недопустимый пароль.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,298 @@
+body {
+    width: 400px;
+}
+
+/* =====================================================
+   Some defaults across all toggle demos
+   ===================================================== */
+.toggle {
+    display: block;
+    text-align: center;
+    user-select: none;
+}
+
+.toggle--checkbox {
+    display: none;
+}
+
+.toggle--btn {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.4em;
+    transition: all 350ms ease-in;
+}
+.toggle--btn:hover {
+    cursor: pointer;
+}
+
+.toggle--btn, .toggle--btn:before, .toggle--btn:after,
+.toggle--checkbox,
+.toggle--checkbox:before,
+.toggle--checkbox:after,
+.toggle--feature,
+.toggle--feature:before,
+.toggle--feature:after {
+    transition: all 250ms ease-in;
+}
+.toggle--btn:before, .toggle--btn:after,
+.toggle--checkbox:before,
+.toggle--checkbox:after,
+.toggle--feature:before,
+.toggle--feature:after {
+    content: '';
+    display: block;
+}
+
+
+
+
+/* ======================================================
+   Push button toggle
+   ====================================================== */
+.toggle--push .toggle--btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #f9f8f6;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0px #333, 0 15px 20px 0px #cccccc;
+}
+.toggle--push .toggle--btn, .toggle--push .toggle--btn:before, .toggle--push .toggle--btn:after {
+    transition-duration: 150ms;
+}
+.toggle--push .toggle--btn:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 22.7272727273px;
+    height: 22.7272727273px;
+    border-radius: 50%;
+    background-color: #FF9900;
+    box-shadow: inset 0 0 0 5px #ccc, inset 0 0 0 14px #f9f8f6;
+}
+.toggle--push .toggle--btn:after {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 12px;
+    background-color: #ccc;
+    box-shadow: 0 0 0 2.5px #f9f8f6;
+}
+.toggle--push .toggle--btn:hover:before {
+    box-shadow: inset 0 0 0 5px #b3b3b3, inset 0 0 0 14px #f9f8f6;
+}
+.toggle--push .toggle--btn:hover:after {
+    background-color: #b3b3b3;
+}
+.toggle--push .toggle--checkbox:checked + .toggle--btn {
+    box-shadow: 0 2px 5px 0px gray, 0 15px 20px 0px transparent;
+    transition: box-shadow 1s;
+}
+.toggle--push .toggle--checkbox:checked + .toggle--btn:before {
+    box-shadow: inset 0 0 0 5px #FF9900, inset 0 0 0 14px #f9f8f6;
+}
+.toggle--push .toggle--checkbox:checked + .toggle--btn:after {
+    background-color: #FF9900;
+}
+
+.toggle--push--glow {
+    background: #111;
+    padding: 50px 0;
+    margin-bottom: -50px;
+}
+.toggle--push--glow .toggle--btn {
+    background-color: #dfdfdf;
+    box-shadow: 0 5px 10px 0px #333, 0 0 0 3px #444444, 0 0 8px 2px transparent, 0 0 0 6px #919191;
+}
+.toggle--push--glow .toggle--btn:before {
+    box-shadow: inset 0 0 0 5px #aaa, inset 0 0 0 14px #dfdfdf;
+}
+.toggle--push--glow .toggle--btn:after {
+    background-color: #aaa;
+    box-shadow: 0 0 0 2.5px #dfdfdf;
+}
+.toggle--push--glow .toggle--btn:hover:before {
+    box-shadow: inset 0 0 0 5px #777777, inset 0 0 0 14px #dfdfdf;
+}
+.toggle--push--glow .toggle--btn:hover:after {
+    background-color: #777777;
+}
+.toggle--push--glow .toggle--checkbox:checked + .toggle--btn {
+    box-shadow: 0 0px 8px 0 #0072ad, 0 0 0 3px #0094e0, 0 0 30px 0 #0094e0, 0 0 0 6px #777777;
+}
+.toggle--push--glow .toggle--checkbox:checked + .toggle--btn:before {
+    box-shadow: inset 0 0 0 5px #0094e0, inset 0 0 0 14px #dfdfdf;
+}
+.toggle--push--glow .toggle--checkbox:checked + .toggle--btn:after {
+    background-color: #0094e0;
+}
+
+.settings {
+    cursor: pointer;
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-image: url(../img/img.svg);
+    background-repeat: no-repeat;
+    transition: transform 1s;
+}
+
+
+
+.row-center {
+    align-items: center;
+    margin-bottom: -15px;
+}
+
+.col-right {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    padding-left: 0;
+
+}
+
+#pass {
+    display: block;
+    height: 0px;
+    width: 400px;
+    margin-top: 10px;
+}
+
+#hr_main {
+    margin-bottom: 5px;
+}
+
+password {
+    position: relative;
+    display: none;
+    width: 255px;
+    height: 35px;
+    padding-left: 55px;
+    margin-bottom: 10px;
+}
+
+#input_pass {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    outline: 0;
+    color: #858e97;
+}
+
+#button_pass {
+    position: absolute;
+    height: 100%; width: 50px;
+    top: 0; right: 0;
+    background: #858e97;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+#button_pass::before,
+#button_pass::after {
+    content:'';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+}
+
+
+/* Eye open */
+#input_pass[type='password'] + #button_pass::before {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 15px 0 15px 0;
+    transform: rotate(45deg);
+    transition: height .168s;
+}
+
+/* Pupil open */
+#input_pass[type='password'] + #button_pass::after {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #858e97;
+}
+
+/* Eye closed  */
+#input_pass[type='text'] + #button_pass::before {
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 15px 0 15px 0;
+    transform: rotate(45deg);
+}
+
+/* Pupil closed */
+#input_pass[type='text'] + #button_pass::after {
+    width: 3px;
+    height: 20px;
+    border-radius: 0;
+    transform: rotate(30deg);
+    background: #ffffff;
+    transition: height .132s;
+}
+
+
+/* Demo Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+#save_pass {
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    top: 0;
+    right: -50px;
+    background: #ff9900;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    color: white;
+}
+
+.pass-text {
+    display: none;
+    font-size: 15px;
+    margin-bottom: 5px;
+    transition: color 1s;
+}
+
+#prv {
+    transition: color 1s;
+}
+
+.reset-pass-text {
+    display: none;
+    font-size: 15px;
+    margin-left: 95px;
+    margin-bottom: 5px;
+    transition: color 1s;
+}
+
+#bad-pass-text {
+    display: none;
+    font-size: 15px;
+    margin-left: 96px;
+    margin-bottom: 5px;
+    transition: color 1s;
+    margin-top: -10px;
+    color: red;
+}
